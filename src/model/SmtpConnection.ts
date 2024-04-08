@@ -1,4 +1,5 @@
 import nodemailer, { TransportOptions, Transporter } from "nodemailer";
+import CorreoConfig from "../config/CorreoConfig";
 
 export default class SmtpConnection {
   private smtpConnection: Transporter;
@@ -9,8 +10,8 @@ export default class SmtpConnection {
       port: 587,
       secure: false,
       auth: {
-        user: "santicarivera@gmail.com",
-        pass: "LgITKWj5pDwbn2FH",
+        user: CorreoConfig.LOGIN,
+        pass: CorreoConfig.PASSWORD,
       },
     } as TransportOptions);
   }
