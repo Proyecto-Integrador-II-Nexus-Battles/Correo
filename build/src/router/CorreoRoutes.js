@@ -10,10 +10,10 @@ class CorreoRoutes {
         this.routes();
     }
     routes() {
-        this.router.post("/sendEmailRecuperacion", this.correoController.sendEmailRecuperacion.bind(this.correoController));
-        this.router.post("/sendEmailConfirmacion", this.correoController.sendEmailConfirmacion.bind(this.correoController));
-        this.router.post("/sendEmailSubasta", this.correoController.sendEmailSubasta.bind(this.correoController));
-        this.router.post("/sendEmailPromocion", this.correoController.sendEmailPromocion.bind(this.correoController));
+        this.router.post("/send/recuperacion", this.correoController.sendEmailRecuperacion.bind(this.correoController));
+        this.router.post("/send/confirmacion", this.correoController.sendEmailConfirmacion.bind(this.correoController));
+        this.router.post("/send/subasta", this.correoController.sendEmailSubasta.bind(this.correoController));
+        this.router.post("/send/promocion", this.correoController.sendEmailPromocion.bind(this.correoController));
     }
 }
 exports.default = CorreoRoutes;

@@ -4,4 +4,5 @@ export default {
   HOST: process.env.HOST,
   LOGIN: process.env.LOGIN,
   PASSWORD: process.env.PASSWORD,
+  SMTP_SERVER: process.env.SMTP_SERVER,
 };

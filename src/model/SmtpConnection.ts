@@ -6,7 +6,7 @@ export default class SmtpConnection {
 
   constructor() {
     this.smtpConnection = nodemailer.createTransport({
-      host: "smtp-relay.brevo.com",
+      host: CorreoConfig.SMTP_SERVER,
       port: 587,
       secure: false,
       auth: {
