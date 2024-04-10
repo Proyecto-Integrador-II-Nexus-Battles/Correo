@@ -1,14 +1,6 @@
-export interface EmailInterface {
-  info: {
-    user: string;
-    password: string;
-  };
-  promo: {
-    user: string;
-    password: string;
-  };
-  subasta: {
-    user: string;
-    password: string;
-  };
+export interface EmailAddressInterface {
+  promocion: string;
+  recuperacion: string;
+  confirmacion: string;
+  subasta: string;
 }

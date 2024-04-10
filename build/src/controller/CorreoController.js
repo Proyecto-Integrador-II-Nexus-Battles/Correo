@@ -4,29 +4,63 @@ class CorreoController {
     correoModel;
     templateModel;
     emails;
+    domain;
     constructor(correoModel, templateModel) {
         this.correoModel = correoModel;
         this.templateModel = templateModel;
+        this.domain = "thenexusbattlesii.online";
         this.emails = {
-            info: {
-                user: "info@thenexusbattlesii.online",
-                password: "river12titopare",
-            },
-            promo: {
-                user: "promo@thenexusbattlesii.online",
-                password: "promo123",
-            },
-            subasta: {
-                user: "subasta@thenexusbattlesii.online",
-                password: "subasta123",
-            },
+            recuperacion: `recuperacion@${this.domain}`,
+            confirmacion: `confirmacion@${this.domain}`,
+            subasta: `subasta@${this.domain}`,
+            promocion: `promocion@${this.domain}`,
         };
     }
-    async sendEmailInfo(req, res) {
-        const body = req.body;
-        const from = this.emails.info.user;
-        const template = await this.templateModel.getTestTemplate();
+    async sendMail(from, body, template) {
         const result = await this.correoModel.sendEmail(from, body.email, body.subject, body.message, template);
+        return result;
+    }
+    async sendEmailRecuperacion(req, res) {
+        const body = req.body;
+        const from = this.emails.recuperacion;
+        const template = await this.templateModel.getRecuperarContrasena();
+        const result = await this.sendMail(from, body, template);
+        if (result) {
+            res.status(200).json({ message: "Correo enviado" });
+        }
+        else {
+            res.status(500).json({ message: "Error al enviar el correo" });
+        }
+    }
+    async sendEmailConfirmacion(req, res) {
+        const body = req.body;
+        const from = this.emails.confirmacion;
+        const template = await this.templateModel.getConfirmarCuenta();
+        const result = await this.sendMail(from, body, template);
+        if (result) {
+            res.status(200).json({ message: "Correo enviado" });
+        }
+        else {
+            res.status(500).json({ message: "Error al enviar el correo" });
+        }
+    }
+    async sendEmailPromocion(req, res) {
+        const body = req.body;
+        const from = this.emails.promocion;
+        const template = await this.templateModel.getPromociones();
+        const result = await this.sendMail(from, body, template);
+        if (result) {
+            res.status(200).json({ message: "Correo enviado" });
+        }
+        else {
+            res.status(500).json({ message: "Error al enviar el correo" });
+        }
+    }
+    async sendEmailSubasta(req, res) {
+        const body = req.body;
+        const from = this.emails.subasta;
+        const template = await this.templateModel.getSubasta();
+        const result = await this.sendMail(from, body, template);
         if (result) {
             res.status(200).json({ message: "Correo enviado" });
         }

@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const nodemailer_1 = __importDefault(require("nodemailer"));
+const CorreoConfig_1 = __importDefault(require("../config/CorreoConfig"));
 class SmtpConnection {
     smtpConnection;
     constructor() {
@@ -12,8 +13,8 @@ class SmtpConnection {
             port: 587,
             secure: false,
             auth: {
-                user: "santicarivera@gmail.com",
-                pass: "LgITKWj5pDwbn2FH",
+                user: CorreoConfig_1.default.LOGIN,
+                pass: CorreoConfig_1.default.PASSWORD,
             },
         });
     }
