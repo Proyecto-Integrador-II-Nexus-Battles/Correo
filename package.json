@@ -7,7 +7,7 @@
     "dev": "ts-node-dev --env-file=env/.development.env src/index.ts",
     "build": "rm -rf ./build && tsc",
     "lint": "ts-standard --fix",
-    "start": "node --env-file=env/.production.env build/src/index.js",
+    "start": "node build/src/index.js",
     "test": "jest --verbose"
   },
   "keywords": [

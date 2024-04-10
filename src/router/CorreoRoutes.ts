@@ -11,19 +11,19 @@ export default class CorreoRoutes {
 
   routes() {
     this.router.post(
-      "/sendEmailRecuperacion",
+      "/send/recuperacion",
       this.correoController.sendEmailRecuperacion.bind(this.correoController)
     );
     this.router.post(
-      "/sendEmailConfirmacion",
+      "/send/confirmacion",
       this.correoController.sendEmailConfirmacion.bind(this.correoController)
     );
     this.router.post(
-      "/sendEmailSubasta",
+      "/send/subasta",
       this.correoController.sendEmailSubasta.bind(this.correoController)
     );
     this.router.post(
-      "/sendEmailPromocion",
+      "/send/promocion",
       this.correoController.sendEmailPromocion.bind(this.correoController)
     );
   }
