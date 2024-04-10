@@ -16,19 +16,19 @@ export default class TemplateModel {
 
   constructor() {
     this.recuperarContrasenaTemplate = fs.readFileSync(
-      path.join(__dirname, "..", "..", "view", "RecuperarContrasena.ejs"),
+      path.join(__dirname, "..", "..", "..", "view", "RecuperarContrasena.ejs"),
       "utf-8"
     );
     this.confirmarCuentaTemplate = fs.readFileSync(
-      path.join(__dirname, "..", "..", "view", "ConfirmarCuenta.ejs"),
+      path.join(__dirname, "..", "..", "..", "view", "ConfirmarCuenta.ejs"),
       "utf-8"
     );
     this.promocionesTemplate = fs.readFileSync(
-      path.join(__dirname, "..", "..", "view", "Promociones.ejs"),
+      path.join(__dirname, "..", "..", "..", "view", "Promociones.ejs"),
       "utf-8"
     );
     this.subastaTemplate = fs.readFileSync(
-      path.join(__dirname, "..", "..", "view", "Subasta.ejs"),
+      path.join(__dirname, "..", "..", "..", "view", "Subasta.ejs"),
       "utf-8"
     );
   }
