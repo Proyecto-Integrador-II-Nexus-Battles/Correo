@@ -1,54 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recuperación de cuenta</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f4f4f4;
-    }
-
-    .container {
-      text-align: center;
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    h1 {
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    p {
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .code {
-      font-size: 24px;
-      color: #007bff;
-      font-weight: bold;
-    }
-  </style>
+  <title>Recuperar Cuenta</title>
 </head>
 
 <body>
-  <div class="container">
-    <h1>¡Hola <%= data.username %></h1>
-    <p>Hemos recibido una solicitud para recuperar tu cuenta.</p>
-    <p>Tu código de recuperación es:</p>
-    <p class="code"><%= data.code %></p>
+  <div class="template-container">
+    <div style="margin:0px; padding: 0px; background-color: #789DCA; ">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" height="56" width="100%" bgcolor="#789DCA" style="text-align:center; border-collapse:separate">
+        <tbody>
+          <tr>
+            <td>
+              <img data-imagetype="External" src="https://tigre.thenexusbattlesii.online:8081/images/logos/logo.png" width="90" height="70">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#304C8B" align="center" style="text-align: center; border-collapse: separate;">
+        <tbody>
+          <tr>
+            <td align="center" style="padding: 50px 0;">
+              <div align="center" style="max-width: 600px;">
+                <h1 align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: normal; color: #ffffff; margin: 0; padding: 8px;">
+                  Recuperación de cuenta
+                </h1>
+                <h2 align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 24px; font-weight: bold; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: normal; color: #ffffff; margin: 0; padding: 8px;">
+                  ¡Hola, <%= data.username %>!
+                </h2>
+                <p align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: 0.5; color: #ffffff; margin: 0; padding: 8px;">
+                  Vimos que estás intentando recuperar tu cuenta de The Nexus Battles II. Para validar tu recuperación, ingresa el siguiente código de verificación:
+                </p>
+                <p class="codigo-p" align="center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; font-size: 40px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: 0.5; color: #ffffff; margin: 0; padding: 8px;">
+                  <%= data.code %>
+                </p>
+                <p align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; font-stretch: normal; line-height: 1.5; letter-spacing: 0.5; color: #ffffff; margin: 0; padding: 8px;">
+                  Si no solicitaste la recuperación de tu cuenta, contacta a soporte de The Nexus Battles II.
+                </p>
+              </div>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#789DCA" align="center" style="text-align: center; border-collapse: separate;">
+        <tbody>
+          <tr>
+            <td style="padding: 30px 0 12px;">
+              <a href="" target="_blank" title="Entrar al Whatsapp de The Nexxus Battles II" style="display: inline-block; margin-right: 16px; text-decoration: none; color: #d98f40;">
+                <img src="https://tigre.thenexusbattlesii.online:8081/images/logos/whatsapp.png" width="24" height="24">
+              </a>
+              <a href="" target="_blank" title="Entrar al Instagram de The Nexxus Battles II" style="display: inline-block; margin-right: 16px; text-decoration: none; color: #d98f40;">
+                <img src="https://tigre.thenexusbattlesii.online:8081/images/logos/instagram.png" width="24" height="24">
+              </a>
+              <a href="" target="_blank" title="Entrar al Youtube de The Nexxus Battles II" style="display: inline-block; margin-right: 16px; text-decoration: none; color: #d98f40;">
+                <img src="https://tigre.thenexusbattlesii.online:8081/images/logos/youtube.png" width="24" height="24">
+              </a>
+              <a href="" target="_blank" title="Entrar al Facebook de The Nexxus Battles II" style="display: inline-block; margin-right: 16px; text-decoration: none; color: #d98f40;">
+                <img src="https://tigre.thenexusbattlesii.online:8081/images/logos/facebook.png" width="24" height="24">
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 16px 0; text-align: center;">
+              <img src="https://tigre.thenexusbattlesii.online:8081/images/logos/logo.png" width="90" height="70">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="footer-links" style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 1.33; letter-spacing: 0.15; text-align: center; color: rgba(255, 255, 255, 0.8);">
+                <a href="" style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 1.33; letter-spacing: 0.15px; text-align: center; color: rgba(255, 255, 255, 0.8);">
+                  Política de privacidad
+                </a>
+                |
+                <a href="" style="text-decoration: none; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 12px; font-weight: 500; font-style: normal; font-stretch: normal; line-height: 1.33; letter-spacing: 0.15px; text-align: center; color: rgba(255, 255, 255, 0.8);">
+                  Términos de servicio
+                </a>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </body>
 

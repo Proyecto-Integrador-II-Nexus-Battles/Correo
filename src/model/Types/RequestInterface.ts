@@ -18,10 +18,17 @@ export interface PromocionRequest {
   email: string;
   subject: string;
   message: string;
+  cardname: string;
+  sale: number;
+  image: string;
 }
 
 export interface SubastaRequest {
   email: string;
   subject: string;
   message: string;
+  username: string;
+  cardname: string;
+  credits: number;
+  image: string;
 }

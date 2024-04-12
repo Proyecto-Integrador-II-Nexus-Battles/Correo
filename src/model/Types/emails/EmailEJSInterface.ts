@@ -9,9 +9,14 @@ export interface ConfirmarCuentaEJS {
 }
 
 export interface PromocionesEJS {
-  message: string;
+  cardname: string;
+  sale: number;
+  image: string;
 }
 
 export interface SubastaEJS {
-  message: string;
+  username: string;
+  cardname: string;
+  credits: number;
+  image: string;
 }
