@@ -29,6 +29,5 @@ export interface SubastaRequest {
   message: string;
   username: string;
   cardname: string;
-  credits: number;
   image: string;
 }

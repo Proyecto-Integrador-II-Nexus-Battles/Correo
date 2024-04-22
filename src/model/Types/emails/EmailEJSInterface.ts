@@ -17,6 +17,5 @@ export interface PromocionesEJS {
 export interface SubastaEJS {
   username: string;
   cardname: string;
-  credits: number;
   image: string;
 }
