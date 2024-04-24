@@ -8,6 +8,7 @@ const CorreoConfig_1 = __importDefault(require("../config/CorreoConfig"));
 class SmtpConnection {
     smtpConnection;
     constructor() {
+        console.log(CorreoConfig_1.default.SMTP_SERVER, CorreoConfig_1.default.LOGIN, CorreoConfig_1.default.PASSWORD);
         this.smtpConnection = nodemailer_1.default.createTransport({
             host: CorreoConfig_1.default.SMTP_SERVER,
             port: 587,

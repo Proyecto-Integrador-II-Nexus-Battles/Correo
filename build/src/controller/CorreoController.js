@@ -10,10 +10,10 @@ class CorreoController {
         this.templateModel = templateModel;
         this.domain = "thenexusbattlesii.online";
         this.emails = {
-            recuperacion: `recuperacion@${this.domain}`,
-            confirmacion: `confirmacion@${this.domain}`,
-            subasta: `subasta@${this.domain}`,
-            promocion: `promocion@${this.domain}`,
+            recuperacion: `"The Nexus Battles II" recuperacion@${this.domain}`,
+            confirmacion: `"The Nexus Battles II" confirmacion@${this.domain}`,
+            subasta: `"The Nexus Battles II" subasta@${this.domain}`,
+            promocion: `"The Nexus Battles II" promocion@${this.domain}`,
         };
     }
     async sendMail(from, body, template) {
